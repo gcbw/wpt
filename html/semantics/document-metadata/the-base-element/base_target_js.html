@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Example base target javascript link</title>
+<base target="_blank" />
+<script>
+var count = 0;
+function noop(){
+	count++;
+}
+</script>
+<a id="a1" href="javascript:noop()" target="">click me, empty target</a><br/>
+<a id="a2" href="javascript:noop()">click me, no target</a><br/>
+<a id="a3" href="javascript:noop()" target="_blank">click me, target _blank</a><br/>
+<a id="a4" href="javascript:noop()" target="nonblank">click me, named target</a><br/>
+<a id="a5" href="javascript:noop()" onclick="return false;">click me, no target, onclick return false</a><br/>
+<a id="a6" href="javascript:noop()" target="_self">click me, target _self</a><br/>
+<p>tests here are dubious as it is not clear if a fragment only url to the current browser context should be a navigation action or not</p>
